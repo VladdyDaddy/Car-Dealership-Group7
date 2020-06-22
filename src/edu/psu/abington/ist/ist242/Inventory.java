@@ -238,6 +238,8 @@ class Vehicle {
 
     public Vehicle(String vin_) {
 
+        NumDoors numOfDoors;
+
     }
 
     public Vehicle() {
@@ -281,6 +283,10 @@ class Vehicle {
         year = Integer.parseInt(_year);
         car.setYear(year);
 
+        car.setNumOfDoors();
+
+        car.setDrivetrain();
+
         System.out.println("Please enter car color: ");
         color = Exception.testAlpha(Exception.getInput());
         car.setColor(color);
@@ -305,7 +311,7 @@ class Vehicle {
             // cannot use super.color from a non static context, so added String color to Car class
 
             if (car.location.equals(_location)) {
-                System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-10s \n", car.getVin(), car.getYear(), car.getMaker(), car.getModel(), car.getVLocation(), car.getPrice());
+                System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-10s | %10s | %-10s \n", car.getVin(), car.getYear(), car.getMaker(), car.getModel(), car.getNumOfDoors(), car.getDrivetrain(), car.getVLocation(), car.getPrice());
             }
         }
     }
@@ -346,6 +352,10 @@ class Vehicle {
      * year
      */
     protected int year;
+
+    protected Wheeldrive wheeldrive;
+
+    protected NumDoors numDoors;
 
 
     /*
@@ -501,4 +511,43 @@ class Vehicle {
     public String getVLocation() {
         return location;
     }
+
+    public Wheeldrive getDrivetrain() { return wheeldrive; }
+
+    /*
+     * Wheeldrive setter
+     * @param _wheeldrive wheeldrive
+     */
+
+    public void setDrivetrain(Wheeldrive _wheeldrive){ this.wheeldrive =_wheeldrive;}
+
+    /*
+     * Vehicle number of doors setter
+     * @param _numDoors number of doors
+     */
+    public void setNumOfDoors(NumDoors _numDoors) { this.numDoors = _numDoors; }
+
+
+    /*
+     * Vehicle number of doors getter
+     * @return number of doors
+     */
+    public NumDoors getNumOfDoors() { return numDoors; }
+
+    public NumDoors setNumOfDoors() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter number of doors ('two' / 'four'): ");
+        numDoors = NumDoors.valueOf(input.next().toLowerCase());
+        return numDoors;
+    }
+
+
+    public Wheeldrive setDrivetrain() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter drivetrain ('two' / 'four'): ");
+        wheeldrive = Wheeldrive.valueOf(input.next().toLowerCase());
+        return wheeldrive;
+    }
+
+
 }
