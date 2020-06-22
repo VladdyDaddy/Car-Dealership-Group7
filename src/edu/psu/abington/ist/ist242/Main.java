@@ -132,6 +132,8 @@ public class Main {
         car1.setYear(2018);
         car1.setModel("M4");
         car1.setMaker("BMW");
+        car1.setNumOfDoors(NumDoors.two);
+        car1.setDrivetrain(Wheeldrive.two);
         car1.setVLocation("Abington");
         car1.setPrice(50000);
 
@@ -139,8 +141,10 @@ public class Main {
         carList.add(car2);
         car2.setColor("Blue");
         car2.setYear(2019);
-        car2.setModel("RA4");
+        car2.setModel("RS4");
         car2.setMaker("Audi");
+        car2.setNumOfDoors(NumDoors.four);
+        car2.setDrivetrain(Wheeldrive.four);
         car2.setVLocation("UniversityPark");
         car2.setPrice(45000);
 
@@ -150,6 +154,8 @@ public class Main {
         car3.setYear(2020);
         car3.setModel("C63S");
         car3.setMaker("Mercedes-Benz");
+        car3.setNumOfDoors(NumDoors.two);
+        car3.setDrivetrain(Wheeldrive.four);
         car3.setVLocation("Abington");
         car3.setPrice(47000);
 
@@ -159,6 +165,8 @@ public class Main {
         car4.setYear(2021);
         car4.setModel("Supra");
         car4.setMaker("Toyota");
+        car4.setNumOfDoors(NumDoors.two);
+        car4.setDrivetrain(Wheeldrive.two);
         car4.setVLocation("UniversityPark");
         car4.setPrice(55000);
 
@@ -168,6 +176,8 @@ public class Main {
         car5.setYear(2021);
         car5.setModel("M340i");
         car5.setMaker("BMW");
+        car5.setNumOfDoors(NumDoors.four);
+        car5.setDrivetrain(Wheeldrive.four);
         car5.setVLocation("Abington");
         car5.setPrice(52000);
 
