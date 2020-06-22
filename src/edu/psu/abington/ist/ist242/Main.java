@@ -90,8 +90,8 @@ public class Main {
         Salesperson sp1 = new Salesperson();
         sp1.setEmpID("ABC1");
         sp1.setSpEmail("jbond123@gmail.com");
-        sp1.setSpFirstName("James");
-        sp1.setSpLastName("Bond");
+        sp1.setFirstName("James");
+        sp1.setLastName("Bond");
         sp1.setSpPhoneNumber("215-111-1111");
         sp1.setSpLocation("Abington");
         spList.add(sp1);
@@ -99,8 +99,8 @@ public class Main {
         Salesperson sp2 = new Salesperson();
         sp2.setEmpID("DEF2");
         sp2.setSpEmail("pparker456@gmail.com");
-        sp2.setSpFirstName("Peter");
-        sp2.setSpLastName("Parker");
+        sp2.setFirstName("Peter");
+        sp2.setLastName("Parker");
         sp2.setSpPhoneNumber("267-222-2222");
         sp2.setSpLocation("UniversityPark");
         spList.add(sp2);
@@ -108,8 +108,8 @@ public class Main {
         Salesperson sp3 = new Salesperson();
         sp3.setEmpID("GHI3");
         sp3.setSpEmail("tonystark789@gmail.com");
-        sp3.setSpFirstName("Tony");
-        sp3.setSpLastName("Stark");
+        sp3.setFirstName("Tony");
+        sp3.setLastName("Stark");
         sp3.setSpPhoneNumber("215-333-3333");
         sp3.setSpLocation("Abington");
         spList.add(sp3);
@@ -255,7 +255,7 @@ public class Main {
         cust1.setLastName("Khan");
         cust1.setCustID(00001);
         cust1.setPhoneNumber("(123)-456-7890");
-        cust1.setCustEmail("mak93@psu.edu");
+        cust1.setEmail("mak93@psu.edu");
         cust1.setDealershipID(1);
         cList.add(cust1);
 
@@ -263,7 +263,7 @@ public class Main {
         cust2.setLastName("Oakes");
         cust2.setCustID(00002);
         cust2.setPhoneNumber("(321)-456-7890");
-        cust2.setCustEmail("jxo@psu.edu");
+        cust2.setEmail("jxo@psu.edu");
         cust2.setDealershipID(2);
         cList.add(cust2);
 
@@ -271,7 +271,7 @@ public class Main {
         cust3.setLastName("Patel");
         cust3.setCustID(00003);
         cust3.setPhoneNumber("(215)-987-6543");
-        cust3.setCustEmail("mmp5752@psu.edu");
+        cust3.setEmail("mmp5752@psu.edu");
         cust3.setDealershipID(1);
         cList.add(cust3);
 
@@ -279,7 +279,7 @@ public class Main {
         cust4.setLastName("Sudheesh");
         cust4.setCustID(00004);
         cust4.setPhoneNumber("(222)-456-7890");
-        cust4.setCustEmail("nus688@psu.edu");
+        cust4.setEmail("nus688@psu.edu");
         cust4.setDealershipID(2);
         cList.add(cust4);
 
@@ -287,7 +287,7 @@ public class Main {
         cust5.setLastName("Quiambao");
         cust5.setCustID(00005);
         cust5.setPhoneNumber("(333)-456-7890");
-        cust5.setCustEmail("tqq5018@psu.edu");
+        cust5.setEmail("tqq5018@psu.edu");
         cust5.setDealershipID(1);
         cList.add(cust5);
 

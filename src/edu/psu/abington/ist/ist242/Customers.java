@@ -13,7 +13,7 @@ package edu.psu.abington.ist.ist242;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Customers {
+public class Customers extends Users{
 
     /*
      * Unique identification number of each customer and dealership
@@ -24,7 +24,7 @@ public class Customers {
     /*
      * Customers first and last name, phone number, and email
      */
-    private String firstName, lastName, phoneNumber, custEmail;
+    //private String firstName, lastName, phoneNumber, custEmail;
 
     /*
      * Counter to automatically generate customer IDs
@@ -34,13 +34,21 @@ public class Customers {
     /*
      * Customers constructor requiring Customer ID
      */
-    Customers(int custID) {
-    }
+    //Customers(String firstName, String lastName,String email,String phoneNumber,String spEmail,String spPhoneNumber, int custID) {
+    //    super(firstName, lastName, email, phoneNumber, spEmail, spPhoneNumber);
+    //    this.custID = custID;
+    //}
 
     /*
      * Customers constructor
      */
+    Customers(int custID) {
+        super();
+        this.custID = custID;
+    }
+
     Customers() {
+        super();
     }
 
     /*
@@ -71,8 +79,8 @@ public class Customers {
         cust.setPhoneNumber(phoneNumber);
 
         System.out.println("Please enter customer email: ");
-        custEmail = Exception.testEmail(Exception.getInput());
-        cust.setCustEmail(custEmail);
+        email = Exception.testEmail(Exception.getInput());
+        cust.setEmail(email);
 
         cust.setCustID(cCount);
 
@@ -97,88 +105,10 @@ public class Customers {
         this.custID = _CustID;
     }
 
-    /*
-     * Customer firstName getter
-     * @return String firstName
-     */
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    /*
-     * Customer firstName setter
-     * @return String _FirstName
-     */
-
-    public void setFirstName(String _FirstName) {
-        this.firstName = _FirstName;
-    }
-
-    /*
-     * Customer lastName getter
-     * @return String lastName
-     */
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    /*
-     * Customer lastName setter
-     * @return String _LastName
-     */
-
-    public void setLastName(String _LastName) {
-        this.lastName = _LastName;
-    }
-
-    /*
-     * Customer phoneNumber getter
-     * @return String phoneNumber
-     */
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    /*
-     * Customer phoneNumber setter
-     * @return String _PhoneNumber
-     */
-
-    public void setPhoneNumber(String _PhoneNumber) {
-        this.phoneNumber = _PhoneNumber;
-    }
-
-    /*
-     * Customer custEmail getter
-     * @return String custEmail
-     */
-
-    public String getcustEmail() {
-        return custEmail;
-    }
-
-    /*
-     * Customer custEmail setter
-     * @return String _email
-     */
-
-    public void setCustEmail(String _email) {
-        this.custEmail = _email;
-    }
-
-    /*
-     * printCustByDealershipID method lists customers information based on dealership's ID
-     *
-     * @param cList customers Array List
-     * @param _id   dealership's id
-     */
     public static void printCustByDealershipID(ArrayList<Customers> cList, int _id) {
         for (Customers cust : cList) {
             if (cust.dealershipID == _id) {
-                System.out.printf("%-10s | %-12s |  %-12s | %-12s | %-10s \n", cust.getCustID(), cust.getFirstName(), cust.getLastName(), cust.getcustEmail(), cust.getPhoneNumber());
+                System.out.printf("%-10s | %-12s |  %-12s | %-12s | %-10s \n", cust.getCustID(), cust.getFirstName(), cust.getLastName(), cust.getEmail(), cust.getPhoneNumber());
             }
 
         }
