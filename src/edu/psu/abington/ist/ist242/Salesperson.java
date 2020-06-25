@@ -4,9 +4,10 @@ Purpose Details: The Java application you are building for the car dealership wi
 Course: IST 242
 Author: Team 7
 Date Developed: 06/10/2020
-Last Date Changed:
+Last Date Changed: 06/25/2020
 Revision: 4
 */
+
 package edu.psu.abington.ist.ist242;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -35,7 +36,6 @@ public class Salesperson extends Users{
 
     public Salesperson addSalesperson() {
         Salesperson sp = new Salesperson(cCount++);
-        Scanner scnr = new Scanner(System.in);
         System.out.println("Please enter salesperson first name: ");
         firstName = Exception.testAlpha(Exception.getInput());
         sp.setFirstName(firstName);
@@ -97,8 +97,10 @@ public class Salesperson extends Users{
      * @param salespersonArrayListList salesperson Array List
      */
     public static void printSalesperson(ArrayList<Salesperson> spList) {
-        for (Salesperson sales_person : spList) {
-            System.out.printf("%-10s | %-10s | %-15s | %-10s | %-10s \n", sales_person.getFirstName(), sales_person.getLastName(), sales_person.getSpLocation(), sales_person.getPhoneNumber(), sales_person.getEmail());
+        for (Salesperson salesPerson : spList) {
+            System.out.printf("%-10s | %-10s | %-15s | %-10s | %-10s \n",
+                    salesPerson.getFirstName(), salesPerson.getLastName(),
+                    salesPerson.getSpLocation(), salesPerson.getPhoneNumber(), salesPerson.getEmail());
         }
     }
 }
