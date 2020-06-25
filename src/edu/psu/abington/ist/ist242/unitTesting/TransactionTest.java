@@ -3,19 +3,18 @@ package edu.psu.abington.ist.ist242.unitTesting;
 import edu.psu.abington.ist.ist242.Transaction;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
-public class TransactionTest extends MainTest {
+public class TransactionTest {
 
     /**
      * Unit testing for calculateTransaction method in the Transaction class.
      * It tests whether or not the calculation works properly.
-     * @author
+     * @author Team 7
      */
 
     @Test
-    public void totalPayment_UnitTestTrue() {
+    public void calculateTransaction_UnitTestTrue() {
         Transaction trans = new Transaction();
         try {
             assertTrue(trans.calculateTransaction(5.0, 5.0) == 25.00);
@@ -25,7 +24,7 @@ public class TransactionTest extends MainTest {
     }
 
     @Test
-    public void totalPayment_UnitTestFalse () {
+    public void calculateTransaction_UnitTestFalse () {
         Transaction trans = new Transaction();
         try {
             assertFalse(trans.calculateTransaction(5.0, 5.0) == 7.0);
@@ -34,31 +33,32 @@ public class TransactionTest extends MainTest {
             System.out.println("Exception: " + e.getMessage());
         }
     }
-
     /**
-     * Unit testing for sales commission method.
-     * @author
+     * Unit testing for calculateCommission method in the Transaction class.
+     * It tests whether or not the calculation works properly.
+     * @author Team 7
      */
-
     @Test
-    public void setSalesCommission_UnitTestTrue () {
+    public void calculateCommission_UnitTestEquals(){
         Transaction trans = new Transaction();
-        try {
-            assertTrue(trans.setSalesCommission(100.0) == 15.0);
+        try{
+            assertEquals(25.0, trans.calculateCommission(250.0, 0.10), 0.0);
         }
-        catch (Exception e) {
+        catch(Exception e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
+    }
+    @Test
+    public void calculateCommission_UnitTestNotEquals(){
+        Transaction trans = new Transaction();
+        try{
+            assertNotEquals(8.0, trans.calculateCommission(250.0, 0.10));
+        }
+        catch(Exception e) {
             System.out.println("Exception: " + e.getMessage());
         }
     }
 
-    @Test
-    public void setSalesCommission_UnitTestFalse () {
-        Transaction trans = new Transaction();
-        try {
-            assertFalse(trans.setSalesCommission(100.0) == 20.0);
-        }
-        catch (Exception e) {
-            System.out.println("Exception: " + e.getMessage());
-        }
-    }
+
 }
+
